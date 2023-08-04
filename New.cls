@@ -1,4 +1,7 @@
 public class New{
 
-  public NewClass(){}
-}
+  public New(){}
+
+  public bedMethod(Integer param){
+    param=5;
+  }
