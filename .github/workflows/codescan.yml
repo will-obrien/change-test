@@ -27,7 +27,7 @@ jobs:
           if: github.event_name == 'push'
           uses: codescan-io/codescan-scanner-action@1.4
           with:
-            organization: 422
+            organization: 442
             projectKey: projectKeysss 
             login: ${{ secrets.codescan_token }}
             failOnRedQualityGate: true
