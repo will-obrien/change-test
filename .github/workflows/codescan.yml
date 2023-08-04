@@ -1,6 +1,6 @@
 # This is a main workflow to trigger codescan
 
-name: CI
+name: CodeScan
 
 # Controls when the workflow will run
 on:
