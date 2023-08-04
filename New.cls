@@ -1,1 +1,4 @@
-public class New{}
+public class New{
+
+  public NewClass(){}
+}
