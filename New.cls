@@ -6,4 +6,8 @@ public class NewClass{
     param=5;
     //I need to find another quick example lol
   }
+
+  public anotherChange(String param){
+    param='sdfsdf';
+  }
 }
