@@ -27,7 +27,7 @@ jobs:
           if: github.event_name == 'push'
           uses: codescan-io/codescan-scanner-action@1.4
           with:
-            codeScanUrl: https//:grc.codescan.io
+            codeScanUrl: https://grc.codescan.io
             organization: sariftest
             projectKey: projectKeysss 
             login: ${{ secrets.codescan_token2 }}
@@ -36,7 +36,7 @@ jobs:
           if: github.event_name == 'pull_request'
           uses: codescan-io/codescan-scanner-action@1.4
           with:
-            codeScanUrl: https//:grc.codescan.io
+            codeScanUrl: https://grc.codescan.io
             organization: sariftest
             projectKey: projectKeysss
             login: ${{ secrets.codescan_token2 }}
