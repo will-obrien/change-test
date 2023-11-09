@@ -6,10 +6,10 @@ name: CodeScan
 on:
     push:
       branches:
-        - main
+        - sarif-test
     pull_request:
       branches:
-        - main
+        - sarif-test
 jobs:
     build:
       runs-on: ubuntu-latest
@@ -27,17 +27,19 @@ jobs:
           if: github.event_name == 'push'
           uses: codescan-io/codescan-scanner-action@1.4
           with:
-            organization: 442
+            codeScanUrl: https//:grc.codescan.io
+            organization: sariftest
             projectKey: projectKeysss 
-            login: ${{ secrets.codescan_token }}
+            login: ${{ secrets.codescan_token2 }}
             failOnRedQualityGate: true
         - name: Run Codescan On PR
           if: github.event_name == 'pull_request'
           uses: codescan-io/codescan-scanner-action@1.4
           with:
-            organization: 442
+            codeScanUrl: https//:grc.codescan.io
+            organization: sariftest
             projectKey: projectKeysss
-            login: ${{ secrets.codescan_token }}
+            login: ${{ secrets.codescan_token2 }}
             generateSarifFile: true
             failOnRedQualityGate: true
             args: |
