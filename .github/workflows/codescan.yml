@@ -40,7 +40,7 @@ jobs:
             organization: sariftest
             projectKey: projectKeysss
             login: ${{ secrets.codescan_token2 }}
-            generateSarifFile: true
+            generateReportFile: true
             failOnRedQualityGate: true
             args: |
               sonar.pullrequest.branch=${{github.head_ref}}
