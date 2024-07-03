@@ -25,7 +25,7 @@ jobs:
               restore-keys: ${{ runner.os }}-sonar
         - name: Run Codescan On Push
           if: github.event_name == 'push'
-          uses: codescan-io/codescan-scanner-action@1.4
+          uses: codescan-io/codescan-scanner-action@1.5
           with:
             organization: 442
             projectKey: projectKeysss 
@@ -33,20 +33,17 @@ jobs:
             failOnRedQualityGate: true
         - name: Run Codescan On PR
           if: github.event_name == 'pull_request'
-          uses: codescan-io/codescan-scanner-action@1.4
+          uses: codescan-io/codescan-scanner-action@1.5
           with:
             organization: 442
             projectKey: projectKeysss
             login: ${{ secrets.codescan_token }}
             generateSarifFile: true
+            scanChangedFilesOnly: true
             failOnRedQualityGate: true
             args: |
               sonar.pullrequest.branch=${{github.head_ref}}
               sonar.pullrequest.base=${{github.base_ref}}
               sonar.pullrequest.key=${{github.event.number}}
-        - name: Upload SARIF file
-          uses: github/codeql-action/upload-sarif@v2
-          with:
-            sarif_file: codescan.sarif
 
 
