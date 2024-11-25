@@ -31,6 +31,8 @@ jobs:
             projectKey: developerNames 
             login: ${{ secrets.codescan_token }}
             failOnRedQualityGate: true
+            args: |
+                sonar.sonar.scm.provider=git
         - name: Run Codescan On PR
           if: github.event_name == 'pull_request'
           uses: codescan-io/codescan-scanner-action@1.5
@@ -45,5 +47,6 @@ jobs:
               sonar.pullrequest.branch=${{github.head_ref}}
               sonar.pullrequest.base=${{github.base_ref}}
               sonar.pullrequest.key=${{github.event.number}}
+              sonar.sonar.scm.provider=git
 
 
