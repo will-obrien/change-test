@@ -33,6 +33,7 @@ jobs:
             failOnRedQualityGate: true
             args: |
                 sonar.sonar.scm.provider=git
+                sonar.scm.disabled=false
         - name: Run Codescan On PR
           if: github.event_name == 'pull_request'
           uses: codescan-io/codescan-scanner-action@1.5
@@ -48,5 +49,6 @@ jobs:
               sonar.pullrequest.base=${{github.base_ref}}
               sonar.pullrequest.key=${{github.event.number}}
               sonar.sonar.scm.provider=git
+              sonar.scm.disabled=false
 
 
