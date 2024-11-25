@@ -28,7 +28,7 @@ jobs:
           uses: codescan-io/codescan-scanner-action@1.5
           with:
             organization: 442
-            projectKey: projectKeysss 
+            projectKey: developerNames 
             login: ${{ secrets.codescan_token }}
             failOnRedQualityGate: true
         - name: Run Codescan On PR
@@ -36,7 +36,7 @@ jobs:
           uses: codescan-io/codescan-scanner-action@1.5
           with:
             organization: 442
-            projectKey: projectKeysss
+            projectKey: developerNames
             login: ${{ secrets.codescan_token }}
             generateSarifFile: true
             scanChangedFilesOnly: true
