@@ -11,5 +11,5 @@ public bedMethod1(Integer param){  //Bad method1
     param=5;
     //I need to find another quick example lol
     //Trigger
-  }
+  } //Found Error1
 }
