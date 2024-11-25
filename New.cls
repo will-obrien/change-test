@@ -18,4 +18,9 @@ public bedMethod2(Integer param){  //Bad method2
     //I need to find another quick example lol
     //Trigger
   }
+public bedMethod3(Integer param){  //Bad method3
+    param=5;
+    //I need to find another quick example lol
+    //Trigger
+  }
 }
