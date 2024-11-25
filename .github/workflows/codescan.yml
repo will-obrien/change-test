@@ -32,7 +32,7 @@ jobs:
             login: ${{ secrets.codescan_token }}
             failOnRedQualityGate: true
             args: |
-                sonar.sonar.scm.provider=git
+                sonar.scm.provider=git
                 sonar.scm.disabled=false
         - name: Run Codescan On PR
           if: github.event_name == 'pull_request'
@@ -48,7 +48,7 @@ jobs:
               sonar.pullrequest.branch=${{github.head_ref}}
               sonar.pullrequest.base=${{github.base_ref}}
               sonar.pullrequest.key=${{github.event.number}}
-              sonar.sonar.scm.provider=git
+              sonar.scm.provider=git
               sonar.scm.disabled=false
 
 
