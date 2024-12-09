@@ -7,4 +7,8 @@ public class NewClass{
     //I need to find another quick example lol
     //Trigger
   }
+
+ public voidd method2(String param){
+    param = 'hi there';
+ }
 }
